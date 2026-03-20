@@ -1,7 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
-const url = 'https://ganberetmowmaidiory u.supabase.co'
-const key = 'eyJhbGci0iJIUzI1NiIsInR5cCI6IkpXVCJ9.your-actual-key'
+// Hardcoded for reliability
+const url = import.meta.env.VITE_SUPABASE_URL || 'https://ganberetmowmaidiory u.supabase.co'
+const key = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhbmJlcmV0bW93bWFpZGlvcnl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1NzYwMDAsImV4cCI6MjA1ODE1MjAwMH0.placeholder'
 
 export const sb = createClient(url, key)
 
